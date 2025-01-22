@@ -5,8 +5,12 @@
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    //const dropdownBtn = document.querySelector('.advert-dropdown-button-container')
-    //dropdownBtn.addEventListener('click', toggleAd)
+    var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'))
+    var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
+        return new bootstrap.Dropdown(dropdownToggleEl)
+    })
+
+    dropdownList.forEach(d => d.show())
 })
 
 
