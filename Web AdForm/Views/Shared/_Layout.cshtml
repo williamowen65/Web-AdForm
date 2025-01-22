@@ -11,10 +11,10 @@
 <body>
 
 
-    <header class="border advert-dropdown-button-container position-relative ">
-        <img id="quote" class="w-100" src="~/quote.svg" />
-        <div class="position-absolute" style="bottom: 0; left: 50%; transform: translate(-50%, -17px);"> William Owen - Digital Systems Architect</div>
-       
+    <header class="border advert-dropdown-button-container d-flex justify-content-center align-items-center">
+        <img id="quote" class="mx-1" src="~/quote.svg" style="max-height:50px; width: fit-content;" />
+        <div class="px-3"> William Owen - Digital Systems Architect</div>
+     
     </header>
 
     <div id="ad">
@@ -24,6 +24,8 @@
             @RenderBody()
         </main>
     </div>
+
+
 
     <div class="border-top footer text-muted">
         <div class="container text-center">
@@ -38,7 +40,6 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/components.js" asp-append-version="true"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

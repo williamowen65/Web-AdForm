@@ -22,8 +22,15 @@ namespace Web_AdForm.Controllers
         [HttpPost]
         public IActionResult Index(AdResponse adResponse)
         {
+            if (ModelState.IsValid)
+            {
+                // add to database
+
+                return RedirectToAction("Index", "Home");
+            }
           
-            return View();
+            // Show the same page with validation errors
+            return View(adResponse);
         }
 
 

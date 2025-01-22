@@ -26,9 +26,15 @@ namespace Web_AdForm
 
             app.UseAuthorization();
 
+
+        
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=AdvertForm}/{action=Index}/{id?}");
+                pattern: "{controller=Home}/{action=Index}/{id?}");
+
+            app.MapControllerRoute(
+            name: "advertform",
+            pattern: "{controller=AdvertForm}/{action=Index}/{id?}");
 
 
             app.Run();

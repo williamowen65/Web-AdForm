@@ -1,5 +1,6 @@
 ﻿@model AdResponse
 
+
 @{
     ViewData["Title"] = "Ad 1";
 }
@@ -9,7 +10,7 @@
 <div id="" class="d-flex flex-column my-4">
     <div class="ad-content">
 
-       
+
 
         <div class="sidebar d-flex m-auto align-items-center flex-column">
             <img id="headshot" src="https://placehold.co/600x400" alt="Alternate Text" />
@@ -18,28 +19,21 @@
 
         <div class="d-flex flex-grow-1 mx-4 justify-content-center flex-column">
             <form method="post">
-                @* <input asp-for="Email"/> *@
-                @* <textarea asp-for="Message"></textarea> *@
-                @*
-                    Observed .NET behavior
-                    It seems like my custom components integrate with the .NET framework as expected 
-                    b/c of the field names matching the model properties.
 
-                    @model isn't declared at the top b/c of this. The action can still bind the correct data.
-                    But is is needed for asp-validation-for
+                <div class="field">
 
-                    To test the validation for I removed the frontend validation (attribute required="true") from the input and textarea
-                    and manually added "*" to the alias
-                    
-                *@
+                    <label asp-for="Email"></label>
+                    <input class="form-control" asp-for="Email" />
+                    <span asp-validation-for="Email"></span>
+                </div>
 
-                <input-component style="width: 48%"  type="email"
-                                 fieldName="email" alias="Email*"></input-component>
-                <span asp-validation-for="Email"></span>
-                <textarea-component  fieldName="message" alias="Message*"></textarea-component>
-                <span asp-validation-for="Message" ></span>
+                <div class="field">
+                    <label asp-for="Message"></label>
+                    <textarea class="form-control" asp-for="Message"></textarea>
+                    <span asp-validation-for="Message"></span>
+                </div>
                 <br />
-                <button type="submit" class="btn btn-sm btn-primary mt-1">Submit</button>
+                <button type="submit" class="btn btn-sm btn-primary mt-1 mx-auto d-block">Submit</button>
             </form>
         </div>
 
@@ -49,3 +43,11 @@
     </div>
 
 </div>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    @* @{ *@
+    @*     await Html.RenderPartialAsync("_ValidationScriptsPartial"); *@
+    @* } *@
+}
