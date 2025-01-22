@@ -5,21 +5,21 @@
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    const dropdownBtn = document.querySelector('.advert-dropdown-button-container')
-    dropdownBtn.addEventListener('click', toggleAd)
+    //const dropdownBtn = document.querySelector('.advert-dropdown-button-container')
+    //dropdownBtn.addEventListener('click', toggleAd)
 })
 
 
-function toggleAd() {
-    const ad = document.querySelector('#ad')
+//function toggleAd() {
+//    const ad = document.querySelector('#ad')
 
-    ad.classList.toggle('hide')
+//    ad.classList.toggle('hide')
 
-    setTimeout(() => {
+//    setTimeout(() => {
 
-    // focus fisrt input
+//    // focus fisrt input
 
-    ad.querySelector('#email').focus()
-    }, 1001)
+//    ad.querySelector('#email').focus()
+//    }, 1001)
 
-}
+//}

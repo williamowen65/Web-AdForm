@@ -10,31 +10,40 @@
 </head>
 <body>
 
+    <div class="dropdown text-center mt-4">
 
-    <header class="border advert-dropdown-button-container d-flex justify-content-center align-items-center">
-        <img id="quote" class="mx-1" src="~/quote.svg" style="max-height:50px; width: fit-content;" />
-        <div class="px-3"> William Owen - Digital Systems Architect</div>
-     
-    </header>
+   
+        <div class="btn-group">
 
-    <div id="ad">
+            <header data-bs-toggle="dropdown" aria-expanded="false" class=" dropdown-toggle border advert-dropdown-button-container d-flex justify-content-center align-items-center">
+                    <img id="quote" class="mx-1" src="~/quote.svg" style="max-height:50px; width: fit-content;" />
+                    <div class="px-3"> William Owen - Digital Systems Architect</div>
 
-    <div class="container">
-        <main role="main" class="p-3">
-            @RenderBody()
-        </main>
-    </div>
+                </header>
+        
+            <ul class="dropdown-menu w-100">
+                <div id="ad">
+
+                    <div class="container">
+                        <main role="main" class="p-3">
+                            @RenderBody()
+                        </main>
+                    </div>
 
 
 
-    <div class="border-top footer text-muted">
-        <div class="container text-center">
-            &copy; 2025 - Web_AdForm - <a asp-area="" asp-controller="AdvertForm" asp-action="Privacy">Privacy</a>
+                    <div class="border-top footer text-muted">
+                        <div class="container text-center">
+                            &copy; 2025 - Web_AdForm - <a asp-area="" asp-controller="AdvertForm" asp-action="Privacy">Privacy</a>
+                        </div>
+                    </div>
+
+                </div>
+
         </div>
-    </div>
-
-    </div>
-
+            </ul>
+        </div>
+  
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
