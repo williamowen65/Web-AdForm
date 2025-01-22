@@ -20,9 +20,25 @@
             <form method="post">
                 @* <input asp-for="Email"/> *@
                 @* <textarea asp-for="Message"></textarea> *@
-                <input-component aspFor="Email" style="width: 48%" required="true" type="email"
-                                 fieldName="email" alias="Email"></input-component>
-                <textarea-component aspFor="Message" required="true" fieldName="message" alias="Message"></textarea-component>
+                @*
+                    Observed .NET behavior
+                    It seems like my custom components integrate with the .NET framework as expected 
+                    b/c of the field names matching the model properties.
+
+                    @model isn't declared at the top b/c of this. The action can still bind the correct data.
+                    But is is needed for asp-validation-for
+
+                    To test the validation for I removed the frontend validation (attribute required="true") from the input and textarea
+                    and manually added "*" to the alias
+                    
+                *@
+
+                <input-component style="width: 48%"  type="email"
+                                 fieldName="email" alias="Email*"></input-component>
+                <span asp-validation-for="Email"></span>
+                <textarea-component  fieldName="message" alias="Message*"></textarea-component>
+                <span asp-validation-for="Message" ></span>
+                <br />
                 <button type="submit" class="btn btn-sm btn-primary mt-1">Submit</button>
             </form>
         </div>
