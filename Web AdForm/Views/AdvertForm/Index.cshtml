@@ -1,21 +1,35 @@
-﻿<div id="" class="d-flex">
+﻿@model AdResponse
 
-      <div class="sidebar">
-    <img id="headshot" src="https://placehold.co/600x400" alt="Alternate Text" />
-      </div>
-    <div class="d-flex w-50 m-auto justify-content-center flex-column">
-    <img id="quote" src="~/quote.png"/>
+@{
+    ViewData["Title"] = "Ad 1";
+}
 
-    <form>
-            <input-component  style="width: 48%" required="true" type="email"
-                             fieldName="email" alias="Email" ></input-component>
-        <button type="submit" class="btn btn-sm btn-primary mt-1">Submit</button>
-    </form>
-    
-    </div>
+<!-- This is the body contentof a web page -->
 
-    <div class="sidebar">
-    <a href="#"><img src="~/github-octocat-svgrepo-com.svg" alt="GitHub" style="max-width: 100%; height: auto;" /></a>
+<div id="" class="d-flex flex-column my-4">
+    <div class="ad-content">
+
+       
+
+        <div class="sidebar d-flex m-auto align-items-center flex-column">
+            <img id="headshot" src="https://placehold.co/600x400" alt="Alternate Text" />
+            <p>I am the creator of the website you are looking at and I am always interested in picking up new jobs.</p>
+        </div>
+
+        <div class="d-flex flex-grow-1 mx-4 justify-content-center flex-column">
+            <form method="post">
+                @* <input asp-for="Email"/> *@
+                @* <textarea asp-for="Message"></textarea> *@
+                <input-component aspFor="Email" style="width: 48%" required="true" type="email"
+                                 fieldName="email" alias="Email"></input-component>
+                <textarea-component aspFor="Message" required="true" fieldName="message" alias="Message"></textarea-component>
+                <button type="submit" class="btn btn-sm btn-primary mt-1">Submit</button>
+            </form>
+        </div>
+
+        @* <div class="sidebar d-flex align-items-center " style="right: 0"> *@
+        @*     <a href="#" class="mx-5"><img src="~/github-octocat-svgrepo-com.svg" alt="GitHub" style="max-width: 100%; height: auto;" /></a> *@
+        @* </div> *@
     </div>
 
 </div>

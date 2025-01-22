@@ -5,25 +5,21 @@
 
 
 document.addEventListener("DOMContentLoaded", () => {
-
-    //const quote = document.querySelector("#quote");
-    //if (quote) {
-    //    splitTextIntoDivs(quote);
-    //}
-    //// Split the text in individual divs (including spaces)
-    //function splitTextIntoDivs(element) {
-    //    const text = element.innerText;
-    //    element.innerHTML = '';
-    //    text.split('').forEach((char, i) => {
-    //        const div = document.createElement('span');
-    //        div.textContent = char;
-    //        div.style.transform = `translate(${9 * i}px, ${-3 * i}px)`;
-    //        element.appendChild(div);
-
-    //    });
-    //};
-
-      
-    //console.log({ quote })
-
+    const dropdownBtn = document.querySelector('.advert-dropdown-button-container')
+    dropdownBtn.addEventListener('click', toggleAd)
 })
+
+
+function toggleAd() {
+    const ad = document.querySelector('#ad')
+
+    ad.classList.toggle('hide')
+
+    setTimeout(() => {
+
+    // focus fisrt input
+
+    ad.querySelector('#email').focus()
+    }, 1001)
+
+}

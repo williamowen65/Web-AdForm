@@ -30,8 +30,7 @@ body {
 
 /* This element is manipulated by javascript */
 #quote {
-    width: 50%;
-    max-width: 300px;
+    
     height: fit-content
 }
 
@@ -42,4 +41,40 @@ body {
 .sidebar {
 width: 250px
 
+}
+.advert-dropdown-button-container {
+    cursor:pointer;
+    transition: background 0.5s;
+}
+.advert-dropdown-button-container:hover {
+   background: lightgreen;
+}
+
+.advert-dropdown-button-container button {
+    all: revert;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.advert-dropdown-button-container:hover {
+    text-decoration: underline;
+}
+
+#ad {
+    transition: height 1s;
+    height: fit-content;
+    overflow: hidden;
+   
+}
+
+#ad.hide {
+    
+    height: 0px;
+    
+}
+
+.ad-content {
+
+    display: flex;
+    flex-wrap: wrap;
 }

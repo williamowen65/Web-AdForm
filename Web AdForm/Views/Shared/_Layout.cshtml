@@ -3,33 +3,36 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Web_AdForm</title>
+    <title>Hire Me - @ViewData["Title"]</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Web_AdForm.styles.css" asp-append-version="true" />
 </head>
 <body>
 
-    <div>
 
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                    <div> <i></i> William Owen - Digital Systems Architect</div>
-            </div>
-        </nav>
+    <header class="border advert-dropdown-button-container position-relative ">
+        <img id="quote" class="w-100" src="~/quote.svg" />
+        <div class="position-absolute" style="bottom: 0; left: 50%; transform: translate(-50%, -17px);"> William Owen - Digital Systems Architect</div>
+       
     </header>
+
+    <div id="ad">
+
     <div class="container">
-        <main role="main" class="pb-3">
+        <main role="main" class="p-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <div class="border-top footer text-muted">
         <div class="container text-center">
             &copy; 2025 - Web_AdForm - <a asp-area="" asp-controller="AdvertForm" asp-action="Privacy">Privacy</a>
         </div>
-    </footer>
+    </div>
+
+    </div>
+
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

@@ -18,6 +18,16 @@ namespace Web_AdForm.Controllers
             return View();
         }
 
+        // Model bound route
+        [HttpPost]
+        public IActionResult Index(AdResponse adResponse)
+        {
+          
+            return View();
+        }
+
+
+
         public IActionResult Privacy()
         {
             return View();
